@@ -1,0 +1,92 @@
+ {%unless product.type == 'Wristbands' or product.type == 'Gift Card'%}
+
+ <div class="personalization_wrapper">
+   <div class="personalization_btn">
+     <button class="btn ">Add Personalization</button>
+     <p>Let's make this personal! Add an embroidered name or monogram to your towel for $15 in your choice of color and font style.</p>
+   </div>
+   <input type="hidden" id="personalization_status" value="0" />
+   <div style="display:none;" class="personalization_content">
+     <a class="style-chart-open-popup" href="#style-chart">See all Styles</a>
+     <!--                 <p class="disclaimer_text">Note: Only one of Monogram or Name option will be acceptable.If you enter a name then Monogram option will be neglected, so enter the values accodingly or skip if no need.</p> -->
+     <div id="style-chart" class="mfp-hide">
+       <img src="https://cdn.shopify.com/s/files/1/2412/7289/files/Clutch_Embroidery_Monogram_Options_2_page-0001_1.jpg" />
+     </div>
+     <div class="grid medium-up--one-full">
+       <div class="grid__item ">
+         <div class="input-group">
+           <p class="line-item-property__field">
+             <label>Thread Color</label>
+             <select class="perosonalize_dropdown" id="lettermonogram-style-thread" name="properties[Thread Color]">
+               <option value="noColor selected">Choose color</option>
+               <option value="Raspberry pink">Raspberry pink</option>
+               <option value="Bubble gum pink">Bubble gum pink</option>
+               <option value="Cardinal red">Cardinal red</option>
+               <option value="Light orange">Light orange</option>
+               <option value="Dark orange">Dark orange</option>
+               <option value="Sunflower yellow">Sunflower yellow</option>
+               <option value="Lime green">Lime green</option>
+               <option value="Kelly green">Kelly green</option>
+               <option value="Mint green">Mint green</option>
+               <option value="Slate blue">Slate blue</option>
+               <option value="French blue">French blue</option>
+               <option value="Navy blue">Navy blue</option>
+               <option value="Royal blue">Royal blue</option>
+               <option value="Lavender">Lavender</option>
+               <option value="Purple">Purple</option>
+               <option value="Light silver">Light silver</option>
+               <option value="Charcoal gray">Charcoal gray</option>
+               <option value="Black">Black</option>
+               <option value="Chocolate brown">Chocolate brown</option>
+               <option value="White">White</option>
+               <option value="Ivory">Ivory</option>
+             </select>
+           </p>
+           <p>Please choose Monogram OR Name/Initials</p>
+           <p class="line-item-property__field">
+             <label>Monogram Options</label>
+             <select class="perosonalize_dropdown" id="lettermonogram-style" name="properties[Monogram Options]">
+               <option value="noStyle selected">Choose style</option>
+               <option value="Modern">Modern</option>
+               <option value="Cursive">Cursive</option>
+               <option value="Classic">Classic</option>
+             </select>
+           </p>
+           <p class="line-item-property__field">
+             <label for="name">Monogram Initials (First, Last, Middle initial in that order)</label>
+             <input required="" class="required" type="text" value="No Monogram" name="properties[Monogram Initials]">
+           </p>
+           <p>OR</p>
+           <p class="line-item-property__field">
+             <label for="name">Name or Initials (First, Middle, Last initial in that order)</label>
+             <input required="" class="required" id="name" type="text" value="No Name" name="properties[Name/Initials]">
+           </p>
+           <p class="line-item-property__field">
+           <div class="font-info">
+             <label>Font Options</label>
+             <span class="info">(for Name or Initials; Skip if choosing Monogram)</span>
+           </div>
+           <select class="perosonalize_dropdown" id="lettermonogram-style-font" name="properties[Font Options]">
+             <option value="noFont selected">Choose Font</option>
+             <option value="Jasmine">Jasmine</option>
+             <option value="Salt n Lime">Salt n Lime</option>
+             <option value="Block">Block</option>
+             <option value="Rainbow">Rainbow</option>
+             <option value="Cupcake">Cupcake</option>
+           </select>
+           </p>
+         </div>
+       </div>
+       <div class="grid__item monogram_statement">
+         <h4>MONOGRAM & INITIAL INFORMATION</h4>
+         <p>Please enter your monogram information EXACTLY as you wish it to appear on your item:</p>
+         <p>For a Monogram, enter First, Last, Middle initial.</p>
+         <p>Example: Jane Olivia Smith would be JSO with the last initial in the center being larger.</p>
+         <p>For Initials, enter First, Middle, Last initial.</p>
+         <p>Example: Jane Olivia Smith would be JOS with all initials the same size.</p>
+         <p>Please allow about one additional week for personalized orders.</p>
+       </div>
+     </div>
+   </div>
+ </div>
+ {%endunless%}
