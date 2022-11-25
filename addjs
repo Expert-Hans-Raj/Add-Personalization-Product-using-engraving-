@@ -1,0 +1,23 @@
+var personalization_status = $('input#personalization_status').val();
+if (personalization_status == '1'){
+          console.log('if');
+          console.log('personalization_status',personalization_status);
+   $.ajax({
+    type:'POST',
+    url: '/cart/add.js',
+    dataType:'json',
+    data: {
+      "quantity":1,
+      "id":'34555599061142'
+    },   
+    success: function() {
+    }
+
+  });
+
+}else{
+console.log('esle');
+console.log('personalization_status',personalization_status);
+
+
+}
